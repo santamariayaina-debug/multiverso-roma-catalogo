@@ -1,127 +1,51 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Catálogo - Multiverso Roma</title>
-  <link rel="stylesheet" href="style.css" />
-  <style>
-    body {
-      margin: 0;
-      font-family: Arial, sans-serif;
-      background: #f8f8f8;
-    }
-    header {
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 15px 25px;
-      background: #111;
-    }
-    header img {
-      height: 50px;
-    }
-    nav a {
-      color: white;
-      text-decoration: none;
-      margin: 0 15px;
-      font-weight: bold;
-    }
-    .hero {
-      background: linear-gradient(#000000a0, #000000a0), url('banner.jpg') center/cover;
-      padding: 80px 20px;
-      text-align: center;
-      color: white;
-    }
-    .hero h1 { font-size: 42px; }
-
-    .categorias {
-      padding: 40px 20px;
-      max-width: 1200px;
-      margin: auto;
-    }
-    .categorias h2 {
-      text-align: center;
-      margin-bottom: 20px;
-    }
-    .grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 20px;
-    }
-    .card {
-      background: white;
-      border-radius: 10px;
-      padding: 15px;
-      text-align: center;
-      box-shadow: 0 2px 6px #0002;
-    }
-    .card img { width: 100%; border-radius: 10px; }
-    .card button {
-      margin-top: 10px;
-      padding: 10px;
-      width: 100%;
-      border: none;
-      background: #111;
-      color: white;
-      border-radius: 8px;
-      cursor: pointer;
-    }
-
-    footer {
-      background: #111;
-      padding: 20px;
-      text-align: center;
-      color: white;
-      margin-top: 40px;
-    }
-  </style>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Multiverso Roma - Catálogo</title>
+    <link rel="stylesheet" href="style.css" />
 </head>
+
 <body>
 
-<header>
-  <img src="logo.png" alt="Logo Multiverso Roma">
-  <nav>
-    <a href="#inicio">Inicio</a>
-    <a href="#categorias">Categorías</a>
-    <a href="#contacto">Contacto</a>
-  </nav>
-</header>
+    <!-- HEADER -->
+    <header class="header">
+        <img src="logo.png.png" alt="Logo Multiverso Roma" class="logo">
+        <nav class="nav">
+            <a href="index.html">Inicio</a>
+            <a href="categorias/tazas.html">Tazas</a>
+            <a href="categorias/botellas.html">Botellas</a>
+            <a href="categorias/grabado.html">Grabado Láser</a>
+            <a href="categorias/sublimacion.html">Sublimación</a>
+            <a href="#" class="carrito-btn" onclick="openCarrito()">🛒 Carrito</a>
+        </nav>
+    </header>
 
-<section class="hero" id="inicio">
-  <h1>Catálogo Multiverso Roma</h1>
-  <p>Explora nuestras categorías y descubre productos increíbles.</p>
-</section>
+    <!-- HERO -->
+    <section class="hero">
+        <h1>Bienvenido a Multiverso Roma</h1>
+        <p>Catálogo digital — Sublimación & Grabado Láser</p>
+    </section>
 
-<section class="categorias" id="categorias">
-  <h2>Categorías</h2>
-  <div class="grid">
-    <div class="card">
-      <img src="categoria1.jpg" alt="Categoría 1">
-      <h3>Ropa</h3>
-      <button>Ver más</button>
-    </div>
-    <div class="card">
-      <img src="categoria2.jpg" alt="Categoría 2">
-      <h3>Accesorios</h3>
-      <button>Ver más</button>
-    </div>
-    <div class="card">
-      <img src="categoria3.jpg" alt="Categoría 3">
-      <h3>Hogar</h3>
-      <button>Ver más</button>
-    </div>
-    <div class="card">
-      <img src="categoria4.jpg" alt="Categoría 4">
-      <h3>Tecnología</h3>
-      <button>Ver más</button>
-    </div>
-  </div>
-</section>
+    <!-- PRODUCTOS DESTACADOS -->
+    <section class="productos">
+        <h2>Productos Destacados</h2>
+        <div class="grid" id="destacados"></div>
+    </section>
 
-<footer id="contacto">
-  <p>Multiverso Roma © 2025 - Todos los derechos reservados</p>
-</footer>
+    <!-- CARRITO -->
+    <div id="carrito" class="carrito">
+        <div class="carrito-contenido">
+            <h2>Carrito de Compras</h2>
+            <div id="carrito-items"></div>
+            <p class="total">Total: <span id="carrito-total">₡0</span></p>
+            <button onclick="closeCarrito()" class="cerrar">Cerrar</button>
+        </div>
+    </div>
 
+    <!-- SCRIPTS -->
+    <script src="js/productos.js"></script>
+    <script src="js/carrito.js"></script>
 </body>
 </html>
