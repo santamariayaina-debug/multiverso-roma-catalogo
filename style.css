@@ -1,3 +1,35 @@
-body { font-family: Arial; padding:20px; }
-.item { margin-bottom:30px; }
-img { border:1px solid #ccc; border-radius:8px; }
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f3ef;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+.header {
+    padding: 20px;
+}
+
+.logo {
+    width: 180px;
+    margin-bottom: 10px;
+}
+
+h1 {
+    color: #0b3b3c;
+    font-size: 28px;
+}
+
+.item {
+    background: white;
+    margin: 20px auto;
+    padding: 20px;
+    width: 300px;
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.item img {
+    margin-top: 10px;
+    border-radius: 8px;
+}
