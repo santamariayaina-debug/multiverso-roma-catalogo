@@ -1,34 +1,127 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <title>Multiverso Roma - Catálogo</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Catálogo - Multiverso Roma</title>
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #f8f8f8;
+    }
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 15px 25px;
+      background: #111;
+    }
+    header img {
+      height: 50px;
+    }
+    nav a {
+      color: white;
+      text-decoration: none;
+      margin: 0 15px;
+      font-weight: bold;
+    }
+    .hero {
+      background: linear-gradient(#000000a0, #000000a0), url('banner.jpg') center/cover;
+      padding: 80px 20px;
+      text-align: center;
+      color: white;
+    }
+    .hero h1 { font-size: 42px; }
 
+    .categorias {
+      padding: 40px 20px;
+      max-width: 1200px;
+      margin: auto;
+    }
+    .categorias h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+      gap: 20px;
+    }
+    .card {
+      background: white;
+      border-radius: 10px;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 6px #0002;
+    }
+    .card img { width: 100%; border-radius: 10px; }
+    .card button {
+      margin-top: 10px;
+      padding: 10px;
+      width: 100%;
+      border: none;
+      background: #111;
+      color: white;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+
+    footer {
+      background: #111;
+      padding: 20px;
+      text-align: center;
+      color: white;
+      margin-top: 40px;
+    }
+  </style>
+</head>
 <body>
 
-    <!-- LOGO -->
-    <header class="header">
-        <img src="logo.png.png" alt="Logo Multiverso Roma" class="logo">
-        <h1>Catálogo Multiverso Roma</h1>
-    </header>
+<header>
+  <img src="logo.png" alt="Logo Multiverso Roma">
+  <nav>
+    <a href="#inicio">Inicio</a>
+    <a href="#categorias">Categorías</a>
+    <a href="#contacto">Contacto</a>
+  </nav>
+</header>
 
-    <!-- PRODUCTOS -->
-    <div class="item">
-        <h2>Taza sublimable 11oz - ₡3500</h2>
-        <img src="IMG_20230506_152220.jpg" width="250">
-    </div>
+<section class="hero" id="inicio">
+  <h1>Catálogo Multiverso Roma</h1>
+  <p>Explora nuestras categorías y descubre productos increíbles.</p>
+</section>
 
-    <div class="item">
-        <h2>Botella con grabado láser 750ml - ₡18000</h2>
-        <img src="Botella_elefante.jpeg" width="250">
+<section class="categorias" id="categorias">
+  <h2>Categorías</h2>
+  <div class="grid">
+    <div class="card">
+      <img src="categoria1.jpg" alt="Categoría 1">
+      <h3>Ropa</h3>
+      <button>Ver más</button>
     </div>
+    <div class="card">
+      <img src="categoria2.jpg" alt="Categoría 2">
+      <h3>Accesorios</h3>
+      <button>Ver más</button>
+    </div>
+    <div class="card">
+      <img src="categoria3.jpg" alt="Categoría 3">
+      <h3>Hogar</h3>
+      <button>Ver más</button>
+    </div>
+    <div class="card">
+      <img src="categoria4.jpg" alt="Categoría 4">
+      <h3>Tecnología</h3>
+      <button>Ver más</button>
+    </div>
+  </div>
+</section>
 
-    <div class="item">
-        <h2>Espejo sublimable - ₡3500</h2>
-        <img src="IMG_20231230_140453[1].jpg" width="250">
-    </div>
+<footer id="contacto">
+  <p>Multiverso Roma © 2025 - Todos los derechos reservados</p>
+</footer>
 
 </body>
 </html>
