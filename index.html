@@ -1,51 +1,29 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Multiverso Roma - Catálogo</title>
-    <link rel="stylesheet" href="style.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Multiverso Roma – Catálogo</title>
+  <link rel="stylesheet" href="style.css" />
 </head>
-
 <body>
+  <header class="header">
+    <img src="img/logo.png" alt="Logo Multiverso Roma" class="logo" />
+    <h1>Multiverso Roma</h1>
+    <nav class="menu">
+      <a href="#productos">Productos</a>
+      <a href="carrito.html">Carrito 🛒</a>
+    </nav>
+  </header>
 
-    <!-- HEADER -->
-    <header class="header">
-        <img src="logo.png.png" alt="Logo Multiverso Roma" class="logo">
-        <nav class="nav">
-            <a href="index.html">Inicio</a>
-            <a href="categorias/tazas.html">Tazas</a>
-            <a href="categorias/botellas.html">Botellas</a>
-            <a href="categorias/grabado.html">Grabado Láser</a>
-            <a href="categorias/sublimacion.html">Sublimación</a>
-            <a href="#" class="carrito-btn" onclick="openCarrito()">🛒 Carrito</a>
-        </nav>
-    </header>
+  <section class="hero">
+    <h2>Catálogo Digital</h2>
+    <p>Descubre nuestros productos exclusivos</p>
+  </section>
 
-    <!-- HERO -->
-    <section class="hero">
-        <h1>Bienvenido a Multiverso Roma</h1>
-        <p>Catálogo digital — Sublimación & Grabado Láser</p>
-    </section>
+  <section id="productos" class="productos-grid"></section>
 
-    <!-- PRODUCTOS DESTACADOS -->
-    <section class="productos">
-        <h2>Productos Destacados</h2>
-        <div class="grid" id="destacados"></div>
-    </section>
-
-    <!-- CARRITO -->
-    <div id="carrito" class="carrito">
-        <div class="carrito-contenido">
-            <h2>Carrito de Compras</h2>
-            <div id="carrito-items"></div>
-            <p class="total">Total: <span id="carrito-total">₡0</span></p>
-            <button onclick="closeCarrito()" class="cerrar">Cerrar</button>
-        </div>
-    </div>
-
-    <!-- SCRIPTS -->
-    <script src="js/productos.js"></script>
-    <script src="js/carrito.js"></script>
+  <script src="productos.js"></script>
+  <script src="carrito.js"></script>
 </body>
 </html>

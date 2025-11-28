@@ -1,35 +1,49 @@
 body {
-    font-family: Arial, sans-serif;
-    background: #f7f3ef;
-    margin: 0;
-    padding: 0;
-    text-align: center;
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #f7f7f7;
+  color: #333;
 }
-
 .header {
-    padding: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 30px;
+  background: #8a1d3b;
+  color: white;
 }
-
-.logo {
-    width: 180px;
-    margin-bottom: 10px;
+.logo { height: 60px; }
+.menu a { margin-left: 20px; color: white; text-decoration: none; font-weight: bold; }
+.hero {
+  text-align: center;
+  padding: 60px 20px;
+  background: white;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
 }
-
-h1 {
-    color: #0b3b3c;
-    font-size: 28px;
+.productos-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  grid-gap: 20px;
+  padding: 30px;
 }
-
-.item {
-    background: white;
-    margin: 20px auto;
-    padding: 20px;
-    width: 300px;
-    border-radius: 12px;
-    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+.producto {
+  background: white;
+  padding: 15px;
+  border-radius: 10px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  text-align: center;
 }
-
-.item img {
-    margin-top: 10px;
-    border-radius: 8px;
+.producto img {
+  width: 100%;
+  border-radius: 8px;
 }
+.btn-agregar {
+  background: #8a1d3b;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  margin-top: 10px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+.btn-agregar:hover { background: #70162e; }

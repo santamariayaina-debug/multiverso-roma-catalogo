@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Carrito</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="header">
+    <h1>Carrito de Compras</h1>
+    <a href="index.html" class="menu">Volver</a>
+  </header>
+
+  <table border="1" style="width:100%; margin-top:20px;">
+    <thead>
+      <tr><th>ID</th><th>Cantidad</th></tr>
+    </thead>
+    <tbody id="tabla-carrito"></tbody>
+  </table>
+
+  <script src="carrito.js"></script>
+  <script>cargarCarrito();</script>
+</body>
+</html>
